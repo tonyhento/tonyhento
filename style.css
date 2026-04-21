@@ -10,6 +10,18 @@ body{
     font-family: Helvetica, Arial, sans-serif;
 }
 
+h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0 0 .5rem 0;
+    color: #fff;
+}
+
 /* HEADER */
 
 .header {
@@ -177,7 +189,7 @@ body.light-mode .project-info p {
     display: block;
     align-content: center;
     margin: auto;
-    max-width: 950px;
+    max-width: 1200px;
     padding-bottom: 1rem;
 }
 
@@ -222,7 +234,7 @@ body.light-mode .project-info p {
     display:grid;
     justify-content:center;
     align-items: center;
-    padding: 60px 5px;
+    padding: 60px 0;
 }
 
 .journey-container {
@@ -230,7 +242,7 @@ body.light-mode .project-info p {
     max-width:1200px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap: 140px;
+    gap: 260px;
 }
 
 .journey-col h4{
@@ -292,6 +304,19 @@ body.light-mode .journey-col h4{
     font-weight: 1000;
     color: #6b6b6b;
     opacity: 0.8;
+}
+
+.projects-title h2 {
+    color: #6b6b6b;
+    opacity: 0,8;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: .5rem 0;
 }
 
 /* CARD PROJETOS */
@@ -439,4 +464,30 @@ body.light-mode .journey-col h4{
     max-width: 100%;
 }
 
+}
+
+
+/* ------------------------------------------------------------- */
+
+/* ao clicar na imagem projeto hub fabricas */
+
+.prj-section {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+}
+
+.prj-subtitle {
+    width: 35%;
+    padding-right: 3rem;
+    display: block;
+    unicode-range: 3rem;
+    background-color: blue;
+}
+
+.prj-content {
+    width: 65%;
+    display: block;
+    color: #fff;
+    background-color: red;
 }
