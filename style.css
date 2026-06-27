@@ -643,7 +643,6 @@ body.light-mode .journey-col h4{
     padding-right: 3rem;
     display: block;
     unicode-range: 3rem;
-    background-color: blue;
 }
 
 .prj-content {
@@ -657,7 +656,6 @@ body.light-mode .journey-col h4{
     display: flex;
     margin: 2rem 0 3rem 0;
     justify-content: flex-end;
-    background-color: green;
 }
 
 .social-link {
@@ -670,5 +668,4 @@ body.light-mode .journey-col h4{
     line-height: 1.5rem;
     padding-right: 2rem;
     align-items: center;
-    background-color: rgb(255, 0, 200);
 }
