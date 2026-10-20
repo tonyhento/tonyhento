@@ -18,7 +18,7 @@
     'side.journey': 'Journey', 'side.certs': 'Certifications', 'side.contact': 'Contact',
 
     'about.eyebrow': 'MY JOURNEY',
-    'about.t1': 'About me', 'about.t2': 'and', 'about.t3': 'my journey',
+    'about.t1': 'About me', 'about.t2': '&', 'about.t3': 'my journey',
     'about.p1': "I'm Hentony Almeida, a Full Stack developer in training focused on building web applications that combine functionality, design and user experience.",
     'about.p2': 'My programming journey began in 2023 at Senac Hub Academy in Campo Grande (MS). After a period spent exploring other areas and deepening my interest in design, I resumed my studies in 2026, focused on building my own projects, improving my technical skills and finding my first professional opportunity as a developer.',
     'about.hlk': 'FULL STACK DEVELOPER IN TRAINING',

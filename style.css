@@ -23,8 +23,10 @@ h1,h2,h3,h4{font-weight:900;line-height:1.1}
 .ic{width:20px;height:20px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
 /* ---------- TOPBAR fixa (px-6 py-5) ---------- */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:50;min-height:var(--bar);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 24px;background:rgba(244,241,234,0);transition:background .3s,box-shadow .3s,backdrop-filter .3s}
-.topbar.is-scrolled{background:rgba(243, 243, 243, 0.95);box-shadow:0 1px 0 rgba(17,24,39,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;min-height:var(--bar);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 24px;transition:box-shadow .3s}
+.topbar::before{content:\"\";position:absolute;inset:0;z-index:-1;background:rgba(243,243,243,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);opacity:0;transition:opacity .3s}
+.topbar.is-scrolled{box-shadow:0 1px 0 rgba(17,24,39,.06)}
+.topbar.is-scrolled::before{opacity:1}
 .topbar__brand{font-size:24px;font-weight:900;text-decoration:none;white-space:nowrap;line-height:1.33}
 .topbar__brand span{color:var(--accent)}
 .topbar__nav{display:flex;align-items:center;font-size:15px;text-transform:uppercase;font-weight:600;letter-spacing:.025em}
@@ -138,6 +140,7 @@ h1,h2,h3,h4{font-weight:900;line-height:1.1}
 .uline{display:block;width:64px;height:4px;background:var(--accent);border-radius:99px;margin:0 auto 64px}
 .clead{color:var(--g600);font-size:18px;line-height:1.55;margin:0 auto 40px;max-width:640px;text-align:center}
 .cinfo{display:flex;flex-wrap:wrap;justify-content:center;gap:24px 64px}
+@media (max-width:767px){.cinfo{flex-direction:column;align-items:flex-start;width:fit-content;margin:0 auto;gap:24px}}
 .cinfo li{display:flex;align-items:center;gap:16px}
 .cinfo .ic{width:40px;height:40px;padding:11px;border-radius:8px;background:var(--accent-10)}
 .cinfo strong{display:block;font-weight:600;color:var(--ink)}
