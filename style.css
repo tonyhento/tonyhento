@@ -161,12 +161,13 @@ h1,h2,h3,h4{font-weight:900;line-height:1.1}
 .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .js .reveal.is-in{opacity:1;transform:none}
 .js .reveal.d1{transition-delay:.08s}.js .reveal.d2{transition-delay:.16s}.js .reveal.d3{transition-delay:.24s}
-.jcard.reveal.is-in,
+.jcard.reveal.is-in,.toolgrid li.reveal.is-in{transition:opacity .7s ease,transform .3s,box-shadow .3s,border-color .3s}
+
 /* ---------- RESPONSIVO (breakpoints do Tailwind: md 768, lg 1024) ---------- */
 @media (min-width:768px){
   .sec h2{font-size:48px}
   .skillcols h2{font-size:36px}
-      .pitem{font-size:30px}.pitem.is-active{font-size:36px}
+  .pitem{font-size:30px}.pitem.is-active{font-size:36px}
   .sec--contact h2.center{font-size:48px}
   .sec#projetos h2{font-size:48px}
 }
