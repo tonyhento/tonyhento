@@ -1,138 +1,160 @@
-<!DOCTYPE html>
-  <html lang="pt-br">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hentony Almeida — Desenvolvedor Full Stack em formação</title>
+  <meta name="description" content="Portfólio de Hentony Almeida, desenvolvedor Full Stack em formação: projetos SONORA, ASTER e Hub Fábricas, formação em Redes de Computadores e certificações.">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hentony Almeida — Desenvolvedor Full Stack em formação">
+  <meta property="og:description" content="Aplicações modernas que unem design, performance e experiência do usuário.">
+  <meta property="og:image" content="assets/img/sonora-home.webp">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="stylesheet" href="style.css">
-  <title>HentonyAlmeida</title>
-
+  <script src="i18n.js"></script>
 </head>
+<body class="i18n-pending">
+  <a class="skip" href="#sobre" data-i18n="skip">Pular para o conteúdo</a>
 
-<body>
-
-<header class="header">
-
-    <div class="logo">
-        <a href="#HentonyAlmeida">
-            <span class="logo-hv">HV</span>
-        </a>
-
-    <!-- Botão de tema -->
-        <button id="theme-toggle" class="theme-toggle">
-            ☀
-        </button>
-    </div>
-
-    <!-- Menu -->
-    <nav class="nav-container" id="menu">
-        <ul class="nav-menu">
-            <li><a href="#HentonyAlmeida">Trabalho</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="#Curriculo">Currículo</a></li>
-        </ul>
+  <!-- ================= HERO ================= -->
+  <header class="topbar" id="topbar">
+    <a class="topbar__brand" href="#home">HENTONY<span>.</span></a>
+    <nav class="topbar__nav" id="sideNav" aria-label="Principal">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#sobre" data-i18n="side.about">Sobre mim</a>
+      <a href="#competencias" data-i18n="side.skills">Competências</a>
+      <a href="#projetos" data-i18n="side.projects">Projetos</a>
+      <a href="#certificacoes" data-i18n="side.certs">Certificações</a>
+      <a href="#contato" data-i18n="side.contact">Contato</a>
     </nav>
+    <button class="lang" type="button" data-lang-switch aria-label="Mudar idioma / Change language">
+      <span data-lang="pt">PT</span><span data-lang="en">EN</span>
+    </button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sideNav"><span></span><span></span><span></span></button>
+  </header>
+  <div class="scrim" id="scrim"></div>
 
-    <!-- Hora -->
-    <div class="time" id="time"></div>
+  <section class="hero" id="home">
+    <h1 class="hero__name" aria-label="Hentony Almeida"><span aria-hidden="true">HENTONY</span></h1>
+    <img class="hero__photo" src="assets/img/portrait.webp" width="832" height="1024"
+         alt="Retrato em pixel art de Hentony Almeida" data-i18n-attr="alt:hero.alt" fetchpriority="high">
 
-</header>
-
-<div class="container">
-  <!-- Seção Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-name">Hentony Almeida</h1>
-      <p class="hero-subtitle">Web Developer.</p>
-    </div>
+    <p class="hero__tagline" data-i18n-html="hero.tagline">Construindo<br>Experiências Digitais<br>Modernas.</p>
+    <p class="hero__sub" data-i18n="hero.sub">Desenvolvedor Full Stack em formação, de Campo Grande (MS), em busca da primeira oportunidade na área.</p>
   </section>
 
-  <!-- Seção Trajetória -->
+  <!-- ================= SIDEBAR + CONTEÚDO ================= -->
+  <div class="layout">
+    <main class="content">
 
-  <section class="journey">
-
-    <div class="journey-container">
-
-      <div class="journey-col">
-        <h4>AGORA</h4>
-        <p>Desenvolvedor Web em formação</p>
-        <p>Criando projetos para meu portfólio</p>
-        <p>Estudando diariamente</p>
-      </div>
-
-      <div class="journey-col">
-        <h4>CONSTRUINDO</h4>
-        <p>Aplicações com JavaScript</p>
-        <p>Interfaces responsivas</p>
-        <p>Projetos práticos para aprendizado</p>
-      </div>
-
-      <div class="journey-col">
-        <h4>OBJETIVO</h4>
-        <p>Primeira oportunidade como dev</p>
-        <p>Trabalhar com Front-End</p>
-        <p>Evoluir como desenvolvedor</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Seção Projetos -->
-
-  <section class="projects">
-
-    <div class="projects-title">
-      <h1>Projetos Destaques.</h1>
-    </div>
-
-    <!-- Projeto 1 -->
-    <div class="project-card">
-      <div class="project-media">]
-        <a href="hub-fabricas.html" target="_parent">
-          <img src="hub_fabricas.png" alt="Projeto Hub Fábricas">
-        </a>
-      </div>
-
-      <div class="project-info">
-        <div class="project-header">
-          <h3>Hub Fábricas</h3>
-
-          <div class="tags">
-            <span>Design</span>
-            <span>Site</span>
-            <span>2024</span>
+      <!-- SOBRE -->
+      <section class="sec" id="sobre" aria-labelledby="h-sobre">
+        <p class="eyebrow" data-i18n="about.eyebrow">MINHA JORNADA</p>
+        <h2 id="h-sobre"><span data-i18n="about.t1">Sobre mim</span> <em data-i18n="about.t2">&</em> <span data-i18n="about.t3">minha jornada</span></h2>
+        <div class="two">
+          <div>
+            <p data-i18n="about.p1">Sou Hentony Almeida, desenvolvedor Full Stack em formação, com foco na criação de aplicações web que combinam funcionalidade, design e experiência do usuário.</p>
+            <p data-i18n="about.p2">Minha trajetória na programação começou em 2023, no Senac Hub Academy, em Campo Grande (MS). Após um período dedicado a explorar outras áreas e aprofundar meu interesse por design, retomei meus estudos em 2026 com foco no desenvolvimento de projetos próprios, no aprimoramento das minhas habilidades técnicas e na busca pela minha primeira oportunidade profissional como desenvolvedor.</p>
           </div>
+          <aside class="hl">
+            <p class="hl__k" data-i18n="about.hlk">DESENVOLVEDOR FULL STACK EM FORMAÇÃO</p>
+            <p data-i18n="about.hlv">Cada projeto é uma oportunidade de aprender novas tecnologias, resolver problemas reais e evoluir como profissional. Tenho também uma base de infraestrutura, com formação em Redes de Computadores, para entender como as aplicações funcionam por trás da tela.</p>
+          </aside>
         </div>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum molestias
-        </p>
-      </div>
-    </div>
+        <h3 class="sub"><span data-i18n="journey.h1">Construindo</span> <em data-i18n="journey.h2">minha</em> <span data-i18n="journey.h3">jornada</span></h3>
+        <ol class="jgrid">
+          <li class="jcard"><div class="jcard__top"><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5zM6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></span><span class="pill">2023</span></div><h4 data-i18n="journey.t1">Desenvolvimento de Sistemas</h4><p class="jcard__org" data-i18n="journey.o1">Senac Hub Academy</p><p data-i18n="journey.d1">Primeiro contato com a programação, em Campo Grande (MS). No mesmo ano, Python Essentials 1 e Cybersecurity Essentials pela Cisco.</p><p class="jcard__tag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg><span data-i18n="journey.g1">Início da carreira</span></p></li>
+          <li class="jcard"><div class="jcard__top"><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><span class="pill">2024</span></div><h4 data-i18n="journey.t2">Projeto Hub Fábricas</h4><p class="jcard__org" data-i18n="journey.o2">Senac Hub Academy</p><p data-i18n="journey.d2">Conclusão do curso com a entrega do Hub Fábricas, sistema web em PHP e MySQL.</p><p class="jcard__tag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg><span data-i18n="journey.g2">Projeto de conclusão</span></p></li>
+          <li class="jcard"><div class="jcard__top"><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/></svg></span><span class="pill">2023 – 2025</span></div><h4 data-i18n="journey.t3">Redes de Computadores</h4><p class="jcard__org" data-i18n="journey.o3">Estácio</p><p data-i18n="journey.d3">Tecnólogo concluído em 03/07/2025, com certificação intermediária em Administração de Redes.</p><p class="jcard__tag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg><span data-i18n="journey.g3">Formação superior</span></p></li>
+          <li class="jcard"><div class="jcard__top"><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg></span><span class="pill">2026</span></div><h4 data-i18n="journey.t4">De volta, com foco total</h4><p class="jcard__org" data-i18n="journey.o4">Projetos próprios</p><p data-i18n="journey.d4">Criação do SONORA e do ASTER e estudo de novas tecnologias, em busca de uma oportunidade na área.</p><p class="jcard__tag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg><span data-i18n="journey.g4">Em andamento</span></p></li>
+        </ol>
+      </section>
 
-  </section>
+      <!-- COMPETÊNCIAS -->
+      <section class="sec" id="competencias" aria-labelledby="h-comp">
+        <div class="skillcols">
+          <div>
+            <h2 id="h-comp"><em data-i18n="skills.h1">Habilidades</em> <span data-i18n="skills.h2">técnicas</span></h2>
+            <p class="muted small" data-i18n="skills.intro">As barras mostram meu nível atual de uso, não uma nota: o que já apliquei em projetos e o que ainda estou aprendendo.</p>
+            <ul class="bars">
+              <li class="bar" style="--w:85%"><div class="bar__h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>HTML e CSS</span><em data-i18n="skills.l1">Uso em projetos</em></div><div class="bar__t"><i></i></div></li>
+              <li class="bar" style="--w:78%"><div class="bar__h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>JavaScript</span><em data-i18n="skills.l1">Uso em projetos</em></div><div class="bar__t"><i></i></div></li>
+              <li class="bar" style="--w:62%"><div class="bar__h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>Node.js e Express</span><em data-i18n="skills.l1">Uso em projetos</em></div><div class="bar__t"><i></i></div></li>
+              <li class="bar" style="--w:62%"><div class="bar__h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>PHP e MySQL</span><em data-i18n="skills.l1">Uso em projetos</em></div><div class="bar__t"><i></i></div></li>
+              <li class="bar" style="--w:58%"><div class="bar__h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>Python</span><em data-i18n="skills.l2">Em evolução</em></div><div class="bar__t"><i></i></div></li>
+              <li class="bar" style="--w:50%"><div class="bar__h"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>React</span><em data-i18n="skills.l2">Em evolução</em></div><div class="bar__t"><i></i></div></li>
+            </ul>
+          </div>
+          <div>
+            <h2><span data-i18n="tools.h1">Ferramentas</span> <em data-i18n="tools.h2">e</em> <em data-i18n="tools.h3">Tecnologia</em></h2>
+            <ul class="toolgrid">
+              <li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 8v8M18 11c0 4-6 3-12 5"/></svg></span><span>Git e GitHub</span></li><li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3 3 7 3s7-1.3 7-3"/></svg></span><span>PostgreSQL</span></li><li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3 3 7 3s7-1.3 7-3"/></svg></span><span>MySQL</span></li><li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12 4 7.5"/></svg></span><span>Express</span></li>
+              <li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg></span><span>Vite</span></li><li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span><span>Bootstrap</span></li><li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-3"/></svg></span><span>Chart.js</span></li><li><span class="ibox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><span>Stripe (teste)</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <section class="contact">
+      <!-- PROJETOS -->
+      <section class="sec" id="projetos" aria-labelledby="h-proj">
+        <h2 id="h-proj"><span data-i18n="projects.h1">Projetos</span><em>.</em></h2>
+        <div class="pshow">
+          <ul class="plist">
+            <li><button type="button" class="pitem is-active" data-p="0" aria-controls="ps0">SONORA®</button></li>
+            <li><button type="button" class="pitem" data-p="1" aria-controls="ps1">ASTER</button></li>
+            <li><button type="button" class="pitem" data-p="2" aria-controls="ps2">SENAC Hub Fábricas</button></li>
+          </ul>
+          <div class="pstage">
+            <figure class="pslide is-active" id="ps0" data-p="0">
+              <img src="assets/img/sonora-home.webp" width="1400" height="700" alt="Página inicial do SONORA" data-i18n-attr="alt:projects.sonora.alt1">
+              <figcaption class="pcard"><p class="pcard__k" data-i18n="projects.sonora.k">Projeto em destaque · 2026</p><p data-i18n="p.sonora.d">Loja virtual full stack de áudio, com catálogo, carrinho, checkout e painel administrativo, em português e inglês. Pagamento com Stripe em modo de teste; ainda não publicada.</p><ul class="ptags"><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>WebGL</li><li>Stripe (test)</li></ul><a class="pcard__link" href="https://github.com/tonyhento/sonora" target="_blank" rel="noopener noreferrer" data-i18n="projects.repo">Ver código no GitHub ↗</a></figcaption>
+            </figure>
+            <figure class="pslide" id="ps1" data-p="1">
+              <div class="art art--aster" role="img" aria-label="ASTER" data-i18n-attr="aria-label:projects.aster.alt"><span>aster</span></div>
+              <figcaption class="pcard"><p class="pcard__k" data-i18n="projects.aster.k">Rede social · estudo</p><p data-i18n="p.aster.d">Rede social com feed, postagens, perfis e envio de avatar. Roda localmente e é um projeto de aprendizado.</p><ul class="ptags"><li>React 19</li><li>Vite</li><li>PHP</li><li>PostgreSQL</li></ul></figcaption>
+            </figure>
+            <figure class="pslide" id="ps2" data-p="2">
+              <img src="assets/img/hub-fabricas.webp" width="1200" height="615" loading="lazy" alt="Página inicial do site Hub Fábricas" data-i18n-attr="alt:projects.hub.alt">
+              <figcaption class="pcard"><p class="pcard__k" data-i18n="projects.hub.k">Projeto de conclusão · 2024</p><p data-i18n="p.hub.d">Sistema web do curso de Desenvolvimento de Sistemas do Senac Hub Academy, com área administrativa, gráficos e PDF. Repositório privado.</p><ul class="ptags"><li>PHP</li><li>MySQL</li><li>Bootstrap</li><li>Chart.js</li></ul></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-    <div class="contact-title">
-      <h2>Entre em contato abaixo</h2>
-    </div>
+      <!-- CERTIFICAÇÕES -->
+      <section class="sec" id="certificacoes" aria-labelledby="h-cert">
+        <p class="eyebrow" data-i18n="certs.eyebrow">FORMAÇÃO</p>
+        <h2 id="h-cert"><em data-i18n="certs.h1">Certificações</em> <span data-i18n="certs.h2">e formação</span></h2>
+        <ol class="certs">
+          <li><span>01</span><div><h3 data-i18n="certs.c1">Tecnólogo em Redes de Computadores</h3><p data-i18n="certs.c1d">Estácio · concluído em 03/07/2025</p></div></li>
+          <li><span>02</span><div><h3 data-i18n="certs.c2">Certificação intermediária em Administração de Redes</h3><p data-i18n="certs.c2d">Estácio · 320 h · 04/07/2025</p></div></li>
+          <li><span>03</span><div><h3>Python Essentials 1</h3><p data-i18n="certs.c3d">Cisco Networking Academy, via Senac MS · 17/05/2023</p></div></li>
+          <li><span>04</span><div><h3>Cybersecurity Essentials</h3><p data-i18n="certs.c4d">Cisco Networking Academy · 02/10/2023</p></div></li>
+          <li><span>05</span><div><h3>Computer Hardware Basics</h3><p data-i18n="certs.c5d">Cisco Networking Academy · 26/04/2026</p></div></li>
+          <li><span>06</span><div><h3>IT Customer Support Basics</h3><p data-i18n="certs.c6d">Cisco Networking Academy · 26/04/2026</p></div></li>
+        </ol>
+      </section>
 
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/hentony-almeida" target="_blank">Linkedin</a>
-      <a href="https://github.com/tonyhento" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=silvahentony38@gmail.com&su=Contato%20pelo%20Portfolio" target="_blank">Email</a>
-    </div>                                                                                                           
+      <!-- CONTATO -->
+      <section class="sec sec--contact" id="contato" aria-labelledby="h-cont">
+        <h2 id="h-cont" class="center"><span data-i18n="contact.h1">Vamos conversar</span><em>.</em></h2>
+        <span class="uline" aria-hidden="true"></span>
+        <p class="clead" data-i18n="contact.lead">Estou aberto a oportunidades como desenvolvedor Full Stack júnior. O melhor caminho é pelo LinkedIn ou pelo GitHub.</p>
+        <ul class="cinfo">
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg><div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/hentony-almeida" target="_blank" rel="noopener noreferrer">linkedin.com/in/hentony-almeida</a></div></li>
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.4 3.4 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.4 13.4 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.4 5.4 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.4 3.4 0 0 0 9 18.13V22"/></svg><div><strong>GitHub</strong><a href="https://github.com/tonyhento" target="_blank" rel="noopener noreferrer">github.com/tonyhento</a></div></li>
+        </ul>
+      </section>
 
-    <p class="copyright">© Hentony Almeida 2026.</p>
+      <footer class="foot">
+        <p>© <span id="year">2026</span> Hentony Almeida. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+        <p class="foot__ic"><a href="https://www.linkedin.com/in/hentony-almeida" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a><a href="https://github.com/tonyhento" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.4 3.4 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.4 13.4 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.4 5.4 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.4 3.4 0 0 0 9 18.13V22"/></svg></a></p>
+      </footer>
+    </main>
+  </div>
 
-  </section>
-
-</div>
-
-<section class="content"></section>
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
